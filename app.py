@@ -8,8 +8,8 @@ model = joblib.load('decision_tree_titanic.pkl')
 st.title("🚢 Titanic Survival Predictor")
 st.write("Passenger ki details enter karein taake prediction ki ja sakay:")
 
-# User inputs
-pclass = st.selectbox("Ticket Class (Pclass)",)
+# User inputs (Yahan options daal diye hain)
+pclass = st.selectbox("Ticket Class (Pclass)", [1, 2, 3])
 sex = st.selectbox("Sex", ["Male", "Female"])
 age = st.slider("Age", 0, 100, 28)
 sibsp = st.number_input("Siblings/Spouses Aboard (SibSp)", 0, 10, 0)
